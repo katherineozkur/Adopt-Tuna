@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adopt Tuna — Terrier Mix</title>
+  <meta name="description" content="Meet Tuna — fun loving, super sweet Terrier mix available for adoption." />
+  <style>
+    :root{
+      --pink-1: #fff0f6;
+      --pink-2: #ffd6e7;
+      --text: #2a2a2a;
+      --accent: #ff6fa3;
+      --muted: #666;
+      --card-bg: rgba(255,255,255,0.8);
+      --radius: 14px;
+      --max-width: 900px;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+      background: linear-gradient(180deg,var(--pink-1),var(--pink-2));
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      justify-content:center;
+      padding:28px 16px;
+    }
+    .wrap{
+      width:100%;
+      max-width:var(--max-width);
+      background:transparent;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .card{
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      backdrop-filter: blur(6px);
+    }
+
+    /* photo gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+    .gallery iframe, .gallery img{
+      width:100%;
+      height:100%;
+      min-height:220px;
+      border-radius:12px;
+      border:0;
+      object-fit:cover;
+      display:block;
+      box-shadow:0 6px 12px rgba(0,0,0,0.06);
+    }
+
+    header h1{
+      margin:0 0 6px 0;
+      font-size: clamp(28px, 5vw, 40px);
+      letter-spacing: -0.5px;
+    }
+    .sub{
+      color:var(--muted);
+      margin:0 0 12px 0;
+      font-size: 14px;
+    }
+
+    .bio{
+      font-size:16px;
+      line-height:1.5;
+    }
+
+    .info-grid{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .pill{
+      background:rgba(255,255,255,0.9);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:14px;
+      box-shadow:0 3px 8px rgba(0,0,0,0.04);
+    }
+
+    .actions{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      align-items:stretch;
+      margin-top:8px;
+    }
+
+    .sms-button{
+      background:var(--accent);
+      color:white;
+      border:0;
+      padding:14px 18px;
+      border-radius:12px;
+      font-size:17px;
+      font-weight:600;
+      text-align:center;
+      text-decoration:none;
+      display:inline-block;
+      box-shadow:0 8px 20px rgba(255,111,163,0.2);
+    }
+
+    .sms-button:active{transform:translateY(1px);}
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    .video-wrap{
+      margin-top:8px;
+      border-radius:12px;
+      overflow:hidden;
+      border:0;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    }
+    .video-wrap iframe{
+      width:100%;
+      height:360px;
+      border:0;
+      display:block;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* responsive */
+    @media (max-width:640px){
+      .gallery{grid-template-columns:1fr; gap:12px;}
+      .video-wrap iframe{height:220px;}
+      .info-grid{flex-direction:column;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" aria-label="Tuna photo gallery">
+      <div class="gallery" role="region" aria-label="Tuna photos">
+        <!-- Imgur album embeds. These show the album images when viewed in a browser. -->
+        <iframe src="https://imgur.com/a/EAL3qj3/embed" scrolling="no" loading="lazy" title="Tuna photo album 1"></iframe>
+        <iframe src="https://imgur.com/a/yjOy4aO/embed" scrolling="no" loading="lazy" title="Tuna photo album 2"></iframe>
+      </div>
+    </div>
+
+    <div class="card" role="region" aria-label="Tuna adoption information">
+      <header>
+        <h1>Tuna</h1>
+        <p class="sub">Terrier mix • 4 years • Female</p>
+      </header>
+
+      <div class="bio">
+        <p><strong>Fun loving and super sweet!</strong> Tuna loves people and kids — she's a huge fan of snuggling in your lap while watching a movie. She gets along with other animals but would do best with smaller playmates who match her energy.</p>
+
+        <div class="info-grid" aria-hidden="false">
+          <div class="pill">Age: 4 years</div>
+          <div class="pill">Sex: Female</div>
+          <div class="pill">Breed: Terrier mix</div>
+        </div>
+
+        <p style="margin-top:12px;" class="note">For health details or to request a meet-and-greet, tap the button below to send a text message.</p>
+
+        <div class="actions">
+          <!-- sms link opens phone's messaging. Includes a default message to make contact easy. -->
+          <a class="sms-button"
+             href="sms:+14693870860?body=Hi%20--%20I'm%20interested%20in%20adopting%20Tuna.%20Can%20I%20learn%20more%3F"
+             title="Text to Adopt Tuna">
+            Text to Adopt 🐾
+          </a>
+          <div style="text-align:center;font-size:13px;color:var(--muted);">Prefer email or a form? You can replace the button link with a mailto: or link to your form.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" role="region" aria-label="Tuna excited video">
+      <h3 style="margin:0 0 8px 0;">Tuna getting excited 💖</h3>
+
+      <div class="video-wrap" aria-label="Tuna video">
+        <!-- Imgur embed for the video album -->
+        <iframe src="https://imgur.com/a/PoMYZGO/embed" scrolling="no" title="Tuna video"></iframe>
+      </div>
+
+      <footer style="margin-top:10px;">Please share this page at adoption events — QR codes work great. Good luck finding Tuna her forever home!</footer>
+    </div>
+  </div>
+</body>
+</html>
